@@ -1,0 +1,277 @@
+.wrapper {
+    width: 100%;
+    padding: 40px 0;
+    text-align: center;
+    background: #ffffff;
+    color: #000000;
+    font-family: system-ui, sans-serif;
+    overflow: hidden;
+    /* Evita desbordamientos horizontales extraños */
+}
+
+.deja-tu-mensaje {
+    width: 49%;
+    margin-top: 24px;
+}
+
+.comments-title {
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    color: #000000;
+}
+
+.embla {
+    position: relative;
+    width: 99%;
+    margin: 0 auto;
+    padding-bottom: 40px;
+    background: #f2faff;
+}
+
+.embla__viewport {
+    overflow: hidden;
+    padding: 20px 0 40px;
+}
+
+.embla__container {
+    display: flex;
+    will-change: transform;
+    /* Importante para que el centrado funcione perfecto */
+    backface-visibility: hidden;
+}
+
+/* AQUÍ ESTABLECEMOS LOS TAMAÑOS PARA VER LA DE LA MITAD Y LOS BORDES */
+.embla__slide {
+    flex: 0 0 85%;
+    /* En móviles ocupa casi todo */
+    min-width: 0;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+@media (max-width: 450px) {
+
+    .deja-tu-mensaje {
+        width: 100%;
+    }
+
+    .wrapper {
+        margin-bottom: -37px;
+    }
+
+   
+}
+
+@media (min-width: 640px) {
+    .embla__slide {
+        flex: 0 0 50%;
+        /* En tablets se ve la del centro y retazos de los lados */
+    }
+}
+
+@media (min-width: 992px) {
+    .embla__slide {
+        /* flex: 0 0 48%; */
+        flex: 0 0 32%;
+        /* En escritorio deja espacio perfecto para ver los costados de las otras */
+    }
+}
+
+/* Tarjeta por defecto (Las de los lados / inactivos) */
+.card {
+    width: 100%;
+    background: rgb(214, 214, 214);
+    border-radius: 10px;
+    box-shadow: 0 0px 17px #798c5e;
+    padding: 2.25rem 1.75rem;
+    color: #ffffff;
+
+    transform: scale(0.92);
+    opacity: 0.35;
+    filter: saturate(0.85);
+    transition: transform 0.45s ease, opacity 0.45s ease, background-color 0.45s ease, filter 0.45s ease;
+
+    display: grid;
+    /* justify-items: center; */
+    align-content: start;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.card.card-expanded {
+    height: auto;
+}
+
+/* Estilo estético para el botón de Ver más */
+.btn-ver-mas {
+    background: none;
+    border: none;
+    color: #798c5e;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 7px;
+}
+
+.btn-ver-mas:hover {
+    text-decoration: underline;
+}
+
+
+/* Tarjeta central seleccionada (Resaltada) */
+.embla__slide.is-selected .card {
+    transform: scale(1.06);
+    opacity: 1;
+    background: rgb(255, 255, 255);
+    filter: saturate(1);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    /* Espacio entre el avatar y el nombre */
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 999px;
+    overflow: hidden;
+    margin-bottom: 0;
+    /* Quitamos el margen inferior anterior */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+    background: linear-gradient(135deg, #637d3e, #3e6606);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.avatar-placeholder {
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+}
+
+.quote {
+    margin: 0 0 0 0;
+    line-height: 1.5;
+    color: #000000;
+    font-size: 12px;
+    text-align: justify;
+    word-break: break-all;
+    white-space: pre-wrap;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.cite {
+    margin: 0;
+    font-size: 15px;
+    color: #798c5e;
+    font-weight: 500;
+}
+
+.date {
+    font-size: 11px;
+    color: rgb(0, 0, 0);
+    margin-top: 8px;
+}
+
+/* Controles del carrusel */
+.embla__controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 10px;
+}
+
+.embla__btn {
+    appearance: none;
+    border: 1px solid rgb(113, 113, 113);
+    background: linear-gradient(135deg, #637d3e, #3e6606);
+    color: #ffffff;
+    width: 44px;
+    height: 44px;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.embla__btn:active {
+    transform: scale(0.96);
+}
+
+.chev {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    opacity: 0.9;
+}
+
+.chev--left {
+    transform: rotate(135deg);
+    margin-left: 4px;
+}
+
+.chev--right {
+    transform: rotate(-45deg);
+    margin-right: 3px;
+}
+
+.embla__dots {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.embla__dot {
+    appearance: none;
+    border: 0;
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    background: rgb(152, 152, 152);
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.embla__dot[aria-selected="true"] {
+    background: #3e6606;
+    transform: scale(1.6);
+}
+
+.comments-loading,
+.no-comments {
+    color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.hearth-comments {
+    color: red;
+    font-size: 23px;
+    margin-left: auto;
+    cursor: pointer;
+    margin-top: 0px;
+    margin-bottom: 2px;
+}

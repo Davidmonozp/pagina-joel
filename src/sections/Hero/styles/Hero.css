@@ -1,0 +1,25 @@
+/* Aseguramos que la sección y el contenedor ocupen el 100% real sin restricciones */
+.container {
+  width: 100vw;
+  /* 100% del ancho de la ventana */
+  margin: 0;
+  padding-top: 84px;
+  overflow: hidden;
+  /* Evita barras de desplazamiento horizontal */
+}
+
+.hero-img {
+  width: 100vw;
+  /* Ancho completo de la pantalla */
+  /* height: 90vh;            */
+  object-fit: cover;
+  display: block;
+  /* Elimina espacios fantasma debajo de la imagen */
+}
+
+@media (max-width: 450px) {
+  .hero-img {
+    width: 121vw;
+    margin-left: -37px;
+  }
+}

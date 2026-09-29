@@ -1,0 +1,237 @@
+/* --- Contenedor Principal (Estilo de la barra) --- */
+.messages-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 750px;
+    margin: 30px auto;
+    padding: 12px 16px;
+    background: #fcfbfa;
+    border-radius: 50px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    gap: 12px;
+}
+
+/* --- Barra de texto simulada (Trigger del modal) --- */
+.messages-trigger-input {
+    flex: 1;
+    background: #ffffff;
+    border: 1px solid #e6e2dc;
+    border-radius: 30px;
+    padding: 12px 20px;
+    color: #8c857b;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.02);
+    user-select: none;
+}
+
+/* --- Botón Principal --- */
+.messages-submit-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background: #658c73;
+    color: #ffffff;
+    border: none;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(101, 140, 115, 0.3);
+}
+
+.messages-submit-btn:hover {
+    background: #557a65;
+}
+
+/* --- Mensajes de feedback (Éxito / Error fuera del modal) --- */
+.messages-feedback {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.messages-feedback p {
+    font-weight: 500;
+}
+
+.messages-feedback p.exito {
+    color: green;
+}
+
+.messages-feedback p.error {
+    color: red;
+}
+
+/* --- Fondo Oscuro del Modal (Overlay) --- */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(4px);
+}
+
+/* --- Contenido del Modal --- */
+.modal-content {
+    background: #ffffff;
+    width: 50%;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    position: relative;
+    animation: fadeIn 0.3s ease;
+    font-family: 'Playfair Display', serif;
+
+}
+
+/* --- Botón para cerrar el Modal (X) --- */
+.modal-close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #8c857b;
+}
+
+.modal-title {
+    margin-bottom: 20px;
+    color: #2c2c2c;
+    font-size: 20px;
+}
+
+/* --- Formulario dentro del Modal --- */
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+}
+
+.form-label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.form-input,
+.form-textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.form-textarea {
+    resize: none;
+}
+
+.input-mensaje {
+    height: 170px;
+    white-space: pre-wrap;
+
+}
+
+.form-submit-btn {
+    margin-top: 10px;
+    padding: 12px;
+    background: #658c73;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    /* font-weight: bold; */
+    cursor: pointer;
+    font-size: 15px;
+    transition: background 0.2s;
+}
+
+.form-submit-btn:hover:not(:disabled) {
+    background: #557a65;
+}
+
+.form-submit-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* Animación simple de aparición */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilos alert */
+/* --- Animaciones personalizadas para SweetAlert2 --- */
+@keyframes swalSlideIn {
+    from {
+        transform: scale(0.8) translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes swalSlideOut {
+    from {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: scale(0.9) translateY(10px);
+        opacity: 0;
+    }
+}
+
+.custom-popup-show {
+    animation: swalSlideIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.custom-popup-hide {
+    animation: swalSlideOut 0.25s ease-in forwards;
+}
+
+
+
+
+@media (max-width: 450px) {
+
+
+    .messages-container {
+        box-shadow: 0 0px 17px #798c5e66;
+    }
+
+    .modal-content {
+        width: 70%;
+    }
+}

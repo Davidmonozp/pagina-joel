@@ -1,0 +1,83 @@
+.moments-title {
+    display: block;
+    width: 53%;
+    margin: 20px auto 44px auto;
+}
+
+.sliding-sprite {
+    width: calc(100% - 60px);
+    margin: 0 30px;
+    overflow: hidden;
+    position: relative;
+}
+
+.sprite-track {
+    display: flex;
+    width: max-content;
+    animation: scroll-infinito 20s linear infinite;
+    gap: 15px;
+    align-items: center;
+    will-change: transform;
+}
+
+.sliding-sprite figure {
+    flex: 0 0 auto;
+    margin: 0;
+}
+
+.sliding-sprite img {
+    display: block;
+    height: 240px;
+    width: 240px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+@keyframes scroll-infinito {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        /* Al usar exactamente -50% con el track flex en max-content y bloques simétricos, 
+           el bucle encaja de forma nativa sin espacios vacíos. */
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 450px) {
+
+
+    .timeline-track {
+        gap: 7px;
+
+    }
+
+    .timeline-title {
+        width: 100%;
+    }
+
+    .moments-title {
+        width: 100%;
+    }
+
+    .embla__viewport {
+        padding: 39px 0 40px;
+    }
+
+    .deja-tu-mensaje {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .sliding-sprite {
+        width: calc(100% - 30px);
+        margin: 0 15px;
+    }
+
+    .sliding-sprite img {
+        height: 200px;
+        width: 200px;
+    }
+}

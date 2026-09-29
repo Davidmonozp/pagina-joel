@@ -1,0 +1,92 @@
+ /* Contenedor principal de la sección */
+ .timeline-container {
+     padding: 9px;
+     background-color: #ffffff;
+     font-family: sans-serif;
+ }
+
+ /* Título superior */
+ .timeline-title {
+     width: 41%;
+     margin-bottom: 42px;
+     margin-top: 20px;
+ }
+
+
+
+ /* Fila horizontal con desplazamiento en pantallas pequeñas */
+ .timeline-track {
+     display: flex;
+     /* gap: 20px; */
+     overflow-x: auto;
+     padding-bottom: 20px;
+     align-items: flex-start;
+ }
+
+ /* Tarjeta individual de cada mes */
+ .timeline-item {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     /* min-width: 110px; */
+     flex: 1;
+ }
+
+ /* Círculo flotante con el número */
+ .timeline-badge {
+     width: 28px;
+     height: 28px;
+     color: #fff;
+     border-radius: 50%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     font-weight: bold;
+     margin-bottom: -9px;
+     z-index: 2;
+     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+ }
+
+ /* Contenedor de la foto en forma de píldora vertical */
+ .timeline-image-wrapper {
+     width: 100px;
+     height: 160px;
+     border-radius: 50px;
+     /* Bordes ovalados tipo píldora */
+     overflow: hidden;
+     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+     background-color: #fff;
+ }
+
+ .timeline-image-wrapper img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+ }
+
+ /* Textos inferiores */
+ .timeline-content {
+     text-align: center;
+     margin-top: 12px;
+ }
+
+ .timeline-month {
+     display: block;
+     font-weight: bold;
+     font-size: 0.95rem;
+ }
+
+ .timeline-description {
+     font-size: 0.8rem;
+     color: #7F8C8D;
+     max-width: 100px;
+     margin: 5px auto 0 auto;
+     line-height: 1.2;
+ }
+
+ @media (max-width: 450px) {
+     .timeline-image-wrapper {
+         width: 128px;
+         height: 204px;
+     }   
+ }

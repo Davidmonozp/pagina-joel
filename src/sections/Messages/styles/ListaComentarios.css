@@ -1,0 +1,152 @@
+.admin-comments-container {
+    max-width: 1400px; /* Ampliamos el contenedor para que quepan bien las 4 columnas */
+    margin: 120px auto 40px auto;
+    padding: 0 20px;
+}
+
+.admin-title {
+    font-size: 1.8rem;
+    color: #2c2c2c;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+/* Caja de autenticación (mantiene un ancho cómodo arriba) */
+.admin-auth-box {
+    max-width: 600px;
+    margin-bottom: 30px;
+    padding: 16px;
+    background: #f8f9fa;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+}
+
+.admin-label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #4a5568;
+}
+
+.admin-input {
+    width: 100%;
+    padding: 10px 12px;
+    box-sizing: border-box;
+    border: 1px solid #cbd5e0;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.admin-input:focus {
+    border-color: #658c73;
+}
+
+.admin-error-text {
+    color: #e53e3e;
+    font-size: 0.85rem;
+    margin-top: 6px;
+}
+
+/* --- GRID DE 4 COLUMNAS --- */
+.admin-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Crea exactamente 4 columnas iguales */
+    gap: 20px; /* Espacio entre tarjetas */
+}
+
+.admin-comment-card {
+    border: 1px solid #e2e8f0;
+    background: #ffffff;
+    padding: 18px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column; /* Apilamos contenido y botón verticalmente dentro de la tarjeta */
+    justify-content: space-between;
+    align-items: stretch;
+    box-shadow: 0 0px 5px #798c5e;
+    transition: box-shadow 0.2s;
+    height: 100%; /* Para que todas las tarjetas de una fila tengan la misma altura */
+    box-sizing: border-box;
+}
+
+.admin-comment-card:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.admin-comment-info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    word-break: break-word;
+    margin-bottom: 15px; /* Separa el texto del botón de eliminar */
+}
+
+.admin-comment-author {
+    margin: 0;
+    font-size: 1rem;
+    color: #2d3748;
+    font-weight: 600;
+}
+
+.admin-comment-text {
+    margin: 0;
+    color: #4a5568;
+    font-size: 0.90rem;
+    white-space: pre-wrap;
+}
+
+.admin-comment-date {
+    color: #a0aec0;
+    font-size: 0.75rem;
+}
+
+/* Botón Eliminar adaptado para el grid */
+.admin-delete-btn {
+    background-color: #fff5f5;
+    color: #e53e3e;
+    border: 1px solid #fed7d7;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 100%; /* Ocupa todo el ancho inferior de la tarjeta */
+    text-align: center;
+}
+
+.admin-delete-btn:hover {
+    background-color: #e53e3e;
+    color: #ffffff;
+}
+
+.admin-loading,
+.admin-empty-text {
+    text-align: center;
+    color: #718096;
+    font-size: 1rem;
+    margin-top: 40px;
+    grid-column: span 4; /* Centra el mensaje de vacío abarcando todo el grid */
+}
+
+/* --- RESPONSIVO PARA PANTALLAS PEQUEÑAS --- */
+@media (max-width: 1100px) {
+    .admin-list {
+        grid-template-columns: repeat(2, 1fr); /* En tablets pasa a 2 columnas */
+    }
+    .admin-loading, .admin-empty-text {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 650px) {
+    .admin-list {
+        grid-template-columns: 1fr; /* En celulares pasa a 1 sola columna */
+    }
+    .admin-loading, .admin-empty-text {
+        grid-column: span 1;
+    }
+}
