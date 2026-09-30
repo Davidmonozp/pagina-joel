@@ -98,7 +98,7 @@ export default function Messages() {
             <MessagesList nuevoComentario={nuevoComentario} />
 
             {/* --- CONTENEDOR PRINCIPAL ESTILO IMAGEN --- */}
-            <div className="messages-container">
+            <div className="messages-container" id='messages'>
                 {/* Barra de texto simulada (Disparador del Modal) */}
                 <div
                     className="messages-trigger-input"
@@ -136,8 +136,8 @@ export default function Messages() {
 
             {/* --- MODAL FLOTANTE CON EL FORMULARIO --- */}
             {isModalOpen && (
-                <div className="modal-overlay">
-                    <div className="modal-content">
+                <div className="modal-overlay" >
+                    <div className="modal-content" >
                         {/* Botón para cerrar modal */}
                         <button
                             className="modal-close-btn"
@@ -146,7 +146,7 @@ export default function Messages() {
                             &times;
                         </button>
 
-                        <h3 className="modal-title">
+                        <h3 className="modal-title" >
                             Escribe tu mensaje
                         </h3>
 

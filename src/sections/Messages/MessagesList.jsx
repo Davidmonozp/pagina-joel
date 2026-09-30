@@ -86,9 +86,9 @@ export default function MessagesList({ nuevoComentario }) {
     }
 
     return (
-        <div className="wrapper">
+        <div className="wrapper" >
             <section className="embla" aria-label="Testimonials carousel">
-                <img src={dejaTuMensaje} alt="deja tu mensaje" className='deja-tu-mensaje' />
+                <img src={dejaTuMensaje} alt="deja tu mensaje" className='deja-tu-mensaje' id='messagesList'/>
 
                 {/* Viewport del carrusel */}
                 <div className="embla__viewport" ref={emblaRef}>
@@ -109,6 +109,8 @@ export default function MessagesList({ nuevoComentario }) {
 
                                 return (
                                     <div
+                                   
+
                                         className={`embla__slide ${index === selectedIndex ? 'is-selected' : ''}`}
                                         key={comentarioId}
                                     >

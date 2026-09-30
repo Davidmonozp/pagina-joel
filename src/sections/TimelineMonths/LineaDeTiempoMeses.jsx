@@ -23,7 +23,7 @@ export default function LineaDeTiempoMeses() {
     ];
 
     return (
-        <div className="timeline-container">
+        <div className="timeline-container" id='historia'>
             <img src={tituloImg} alt="" className='timeline-title'/>
 
             <div className="timeline-track"> 

@@ -33,9 +33,9 @@ const PhotoGallery = () => {
 
     return (
         <>
-            <img src={titulo} alt="momentos" className='moments-title' />
+            <img src={titulo} alt="momentos" className='moments-title' id='momentos'/>
 
-            <section className="sliding-sprite" aria-label="Scrolling image strip">
+            <section className="sliding-sprite" aria-label="Scrolling image strip" >
                 <div className="sprite-track">
                     {fotosDuplicadas.map((foto, index) => (
                         <figure key={index} aria-hidden={index >= originalFotos.length ? "true" : "false"}>
