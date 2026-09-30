@@ -163,9 +163,10 @@
     margin: 0 0 0 0;
     line-height: 1.5;
     color: #000000;
-    font-size: 12px;
+    font-size: 16px;
     text-align: justify;
-    word-break: break-all;
+    /* word-break: break-all; */
+    overflow-wrap: break-word;
     white-space: pre-wrap;
 }
 
@@ -178,7 +179,7 @@
 
 .cite {
     margin: 0;
-    font-size: 15px;
+    font-size: 20px;
     color: #798c5e;
     font-weight: 500;
 }

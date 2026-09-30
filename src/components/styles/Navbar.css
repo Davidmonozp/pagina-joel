@@ -152,3 +152,14 @@
         margin-top: 10px;
     }
 }
+
+@media screen and (max-width: 450px) {
+    .logo-img {
+        width: 170px;
+    }
+
+    .menu-icon {
+        width: 25px;
+        height: 16px;
+    }
+}

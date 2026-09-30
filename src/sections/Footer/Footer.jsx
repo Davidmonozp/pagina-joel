@@ -1,6 +1,11 @@
 import React from 'react';
 import { FaInstagram, FaFacebookF, FaWhatsapp } from 'react-icons/fa';
 import './styles/Footer.css';
+import coche from './../../assets/coche.png'; 
+import chupo from './../../assets/chupo.png'; 
+import nene from './../../assets/nene.png'; 
+
+
 
 // Importa tu ilustración de la ramita si la tienes localmente
 // import branchIcon from '../../assets/branch.png'; 
@@ -104,16 +109,16 @@ const Footer = () => {
 
                     {/* Sección Central (Redes Sociales) */}
                     <div className="footer-socials">
-                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="social-icon-wrapper" aria-label="Instagram">
-                            <img src="./public/chupo.png" alt="chupo" className='icono-chupo' />
+                        <a  target="_blank" rel="noopener noreferrer" className="social-icon-wrapper" aria-label="Instagram">
+                            <img src={chupo} alt="chupo" className='icono-chupo' />
 
                         </a>
-                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="social-icon-wrapper" aria-label="Facebook">
-                            <img src="./public/nene.png" alt="bebe" className='icono-chupo' />
+                        <a  target="_blank" rel="noopener noreferrer" className="social-icon-wrapper" aria-label="Facebook">
+                            <img src={nene} alt="bebe" className='icono-chupo' />
 
                         </a>
-                        <a href="https://whatsapp.com" target="_blank" rel="noopener noreferrer" className="social-icon-wrapper" aria-label="WhatsApp">
-                            <img src="./public/coche.png" alt="coche" className='icono-chupo' />
+                        <a target="_blank" rel="noopener noreferrer" className="social-icon-wrapper" aria-label="WhatsApp">
+                            <img src={coche} alt="coche" className='icono-chupo' />
                         </a>
                     </div>
 
