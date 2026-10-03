@@ -5,8 +5,8 @@
 }
 
 .sliding-sprite {
-    width: calc(100% - 60px);
-    margin: 0 30px;
+    width: calc(100% - 0px);
+    margin: 0 0px;
     overflow: hidden;
     position: relative;
 }
@@ -71,13 +71,11 @@
 }
 
 @media (max-width: 768px) {
-    .sliding-sprite {
-        width: calc(100% - 30px);
-        margin: 0 15px;
-    }
+   
 
     .sliding-sprite img {
         height: 200px;
         width: 200px;
     }
 }
+

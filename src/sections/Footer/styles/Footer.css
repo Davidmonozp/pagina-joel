@@ -41,6 +41,8 @@
     height: 230px;
     overflow: hidden;
     line-height: 0;
+    z-index: 88;
+    background: #ffffff;
 }
 
 .animated-svg-bg {
@@ -189,6 +191,7 @@
         margin: 4px 0 4px 0;
 
     }
+
 }
 
 @media (min-width: 769px) and (max-width: 900px) {
