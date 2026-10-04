@@ -2,21 +2,23 @@ import React from 'react';
 import './styles/PhotoGallery.css';
 
 // Importa tus imágenes
-import joel1Img from '../../assets/joel1.jpeg';
-import joel2Img from '../../assets/joel2.jpeg';
-import joel3Img from '../../assets/joel3.jpeg';
+import mes_1 from '../../assets/mes-1.jpeg';
+import mes_2 from '../../assets/mes-2.jpeg';
+import mes_3 from '../../assets/mes-3.jpeg';
+import mes_4 from '../../assets/mes-4.jpeg';
+import mes_5 from '../../assets/mes-5.jpeg';
+import mes_6 from '../../assets/mes-6.jpeg';
 import titulo from '../../assets/titulo.png';
 
 const PhotoGallery = () => {
     // 1. Colocas tus imágenes en un arreglo (aquí puedes meter tus 100 fotos fácilmente)
     const originalFotos = [
-        joel1Img,
-        joel2Img,
-        joel3Img,
-        joel1Img,
-        joel2Img,
-        joel3Img,
-        joel3Img,
+        mes_1,
+        mes_2,
+        mes_3,
+        mes_4,
+        mes_5,
+        mes_6,
         // joel1Img,
         // joel2Img,
         // joel3Img,
@@ -33,7 +35,7 @@ const PhotoGallery = () => {
 
     return (
         <>
-            <img src={titulo} alt="momentos" className='moments-title' id='momentos'/>
+            <img src={titulo} alt="momentos" className='moments-title' id='momentos' />
 
             <section className="sliding-sprite" aria-label="Scrolling image strip" >
                 <div className="sprite-track">

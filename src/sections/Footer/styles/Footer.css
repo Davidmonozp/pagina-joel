@@ -41,7 +41,7 @@
     height: 230px;
     overflow: hidden;
     line-height: 0;
-    z-index: 8888888888888888;
+    /* z-index: 8888888888888888; */
     background: #ffffff;
 }
 
@@ -189,7 +189,12 @@
 
     .made-with {
         margin: 4px 0 4px 0;
+        font-size: 17px;
 
+    }
+
+  .copyright {
+        font-size: 15px;
     }
 
 }
