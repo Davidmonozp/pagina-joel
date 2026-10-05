@@ -89,9 +89,9 @@
          width: 128px;
          height: 204px;
      }
-      .timeline-description {
-        margin-bottom: -50px;
-      }
+      /* .timeline-description {
+        margin-bottom: -20px;
+      } */
  }
 
  @media (max-width: 1300px) {
