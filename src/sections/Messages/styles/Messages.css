@@ -101,7 +101,7 @@
     right: 15px;
     background: transparent;
     border: none;
-    font-size: 20px;
+    font-size: 30px;
     cursor: pointer;
     color: #8c857b;
 }
@@ -233,5 +233,22 @@
 
     .modal-content {
         width: 70%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .input-mensaje {
+        font-size: 17px;
+    }
+
+    .form-label {
+        font-size: 17px;
+    }
+
+    .modal-close-btn {
+        margin-top: -27px;
+        margin-right: -7px;
+        font-size: 40px;
+
     }
 }

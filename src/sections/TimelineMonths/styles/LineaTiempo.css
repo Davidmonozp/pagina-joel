@@ -88,5 +88,22 @@
      .timeline-image-wrapper {
          width: 128px;
          height: 204px;
-     }   
+     }
+ }
+
+ @media (max-width: 1300px) {
+     .timeline-track {
+         gap:7px;
+     }
+ }
+
+ @media (min-width: 1500px) and (max-width: 2000px) {
+     .timeline-image-wrapper {
+         width: 136px;
+         height: 217px;
+     }
+
+     .timeline-track {
+         gap: 5px;
+     }
  }

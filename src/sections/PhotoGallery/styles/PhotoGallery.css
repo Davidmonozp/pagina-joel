@@ -14,7 +14,7 @@
 .sprite-track {
     display: flex;
     width: max-content;
-    animation: scroll-infinito 20s linear infinite;
+    animation: scroll-infinito 60s linear infinite;
     gap: 15px;
     align-items: center;
     will-change: transform;
