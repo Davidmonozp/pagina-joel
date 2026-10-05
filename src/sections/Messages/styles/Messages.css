@@ -251,4 +251,9 @@
         font-size: 40px;
 
     }
+
+    .form-input,
+    .form-textarea {
+        font-size: 17px;
+    }
 }

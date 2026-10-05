@@ -25,7 +25,7 @@ export default function LineaDeTiempoMeses() {
         { id: 6, mes: "6 Meses", texto: "¡Mis primeros juguetes!", color: "#D4AC0D", img: mes_6 },
         { id: 7, mes: "7 Meses", texto: "¡Explorando el mundo y descubriendo mi sonrisa!", color: "#B03A2E", img: mes_7 },
         { id: 8, mes: "8 Meses", texto: "¡Mi primer globo y un mundo de nuevos juegos!", color: "#689F38", img: mes_8 },
-        { id: 9, mes: "9 Meses", texto: "¡Rodeado de amor y felicidad en mis 9 meses!", color: "#D35400", img: mes_9 },
+        { id: 9, mes: "9 Meses", texto: "¡Rodeado de amor y felicidad!", color: "#D35400", img: mes_9 },
         { id: 10, mes: "10 Meses", texto: "¡Probando nuevos sabores!", color: "#E67E22", img: mes_10 },
         { id: 11, mes: "11 Meses", texto: "¡Más risas y juegos!", color: "#8E44AD", img:mes_11},
         { id: 12, mes: "12 Meses", texto: "¡Ya tengo 1 añito!", color: "#2980B9", img: "https://via.placeholder.com/150" },
